@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+li em {
+  font-weight: 700;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000c7;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+header div {
+  margin: 10px auto;
+}
+
+.chatBlock {
+  max-width: 350px;
+  min-height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 20px auto;
+  border: 2px solid #0000003d;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #73656512;
+  position: relative;
+}
+
+.chatRoom {
+  display: flex;
+  width: auto;
+  align-items: center;
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chatInput input {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+  outline: 0;
+}
+
+.chatInput button {
+  cursor: pointer;
+  width: 20%;
+  margin: 0 auto;
+  padding: 5px 0;
+  color: #fff;
+  background-color: #0a0202;
+  border: 1px solid #0a0202;
+  outline: 0;
+}
+
+.fa-send {
+  color: #fff;
+  font-size: 1.5rem;
+}

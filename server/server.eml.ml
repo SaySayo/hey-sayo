@@ -37,6 +37,7 @@ let home =
         let socket = new WebSocket("ws://" + window.location.host + "/websocket");
 
         socket.onmessage = function (event) {
+          alert(event.data);
           let li = document.createElement("li");
           let em = document.createElement("em");
           let span = document.createElement("span");
@@ -91,6 +92,7 @@ let handle_client client =
     match%lwt Dream.receive client with
     | Some message ->
       let%lwt () = send message in
+      let%lwt () = send "Message Received" in
       loop ()
     | None ->
       forget client_id;
@@ -109,5 +111,3 @@ let () =
 
     Dream.get "/static/**" (Dream.static "./static");
   ]
-  @@ Dream.log "Counter is now: %i" counter;
-  @@ Dream.log "Client: %s" (Dream.client request);

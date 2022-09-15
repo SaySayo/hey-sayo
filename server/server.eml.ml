@@ -25,7 +25,7 @@ let home =
             <input id="chatInput" type="text" placeholder="Type here..." />
             <button type="submit" class="icons plane" id="chatSubmit">
               <i class="fa fa-send"></i>
-            </button>
+             </button>
           </form>
         </div>
       </section>

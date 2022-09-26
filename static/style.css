@@ -7,50 +7,101 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 12px;
+}
+
 body {
   background-color: #f4f4f4;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-li {
-  list-style: none;
-  margin: 5px 0;
-}
-
-li em {
-  font-weight: 700;
-}
-
 header {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background-color: #000000c7;
   color: #fff;
-  font-size: 1rem;
   font-weight: 800;
 }
-
-header div {
-  margin: 10px auto;
+header h1 {
+  font-size: 1.7rem;
 }
 
-.chatBlock {
+header p {
+  font-size: 1.2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.chat-block {
   max-width: 350px;
-  min-height: 60vh;
+  height: 60vh;
   overflow-x: hidden;
   overflow-y: auto;
-  margin: 20px auto;
-  border: 2px solid #0000003d;
   border-radius: 5px;
-  padding: 10px;
   background-color: #73656512;
   position: relative;
+  margin: 0 20px;
 }
 
-.chatRoom {
+.username {
+  background-color: #555454;
+  color: #ffffff;
+  height: 30px;
   display: flex;
-  width: auto;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: .8rem;
+}
+
+.username-desc {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.username-title {
+  cursor: pointer;
+}
+
+.chat-room {
+  padding: 10px;
+}
+
+.chat-room li {
+  list-style: none;
+  margin: 5px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.chat-room li:first-child {
+  margin-top: 0 !important;
+}
+
+.chat-room .chat-sender {
+  font-weight: 600;
+  font-style: italic;
+  color: #333;
+}
+
+.chat-msg {
+  color: #555;
+}
+.sent {
+  color: green;
 }
 
 form {
@@ -85,5 +136,21 @@ form {
 
 .fa-send {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 300px) {
+  .chat-block {
+    width: 250px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 14px;
+  }
+  .chat-block {
+    width: 350px;
+  }
 }
